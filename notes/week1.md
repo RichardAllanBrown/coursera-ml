@@ -44,7 +44,20 @@
  - Usually prototype in Octave to get something good, then move over to java/C to program production code
 
 ##Model and Cost Function
- 
+###Model Representation
+ - Linear regression is one type of model
+ - A training set of hous eprices may have area (x) and price (y). (x,y) being a single example, (x^(i), y^(i)) being the (i)th pair of set
+ - Set goes through an algorithm that crate a hypothesis (h). Hopefully y = h(x), if the model works. (written in a more formal manner)
+ - Linear regression with one variable aka Univariate linear regression
+
+ ###Cost Function
+ - Used to calculate best line to fit the data
+ - Our linear model of (a+bx) will be different lines for different values of a and b (theta 0 and theta 1)
+ - One cost could be to minimize the sum of error squared (h(x) - y)^2
+ - J(a, b) is the cost function, we aim to minimize this
+ - More parameters into J, the more dimensionality your cost function plot can get. i.e. height is J(a, b), a and b in other 2 axes.
+ - A linear model of (a+bx) typically gives a bowl shape, with a minimum point being the bottom of the bowl (and multiple combinations of a and b can make the same cost)
+ - Ideally we want to have a machine automatically tune the values of a and b to find the minimum cost.
 ##Parameter Learning
  
 ##Linear Algebra Review
