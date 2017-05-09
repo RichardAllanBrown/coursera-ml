@@ -94,3 +94,15 @@
  - Similar idea to Matrix Vector. Split the second matrix into seperate columns and matrix vector multiply. Then take the results to construct a new matrix.
  - a axb matrix multiplies by a ixj matrix (where b=i) will have a axj matrix as the answer
  - Computers with multiple cores can perform matrix operations quickly. This ties in to why frameworks like TensorFlow can use lots of cores effectivly. Matricies everywhere.
+###Matrix Multiplication Properties
+ - Matrix multiplication is NOT commutative
+ - But it is associative
+ - Identity matrix has 1 at each point where i=j in a matrix, everything else is 0
+###Inverse and Transpose
+ - A square matrix multiplied by it's inverse will give the identity matrix
+ - only square has an inverse
+ - Can compute inverse with any decent software package (like Octave)
+ - Matricies with all 0's in them cannot have an inverse
+ - A matrix without an inverse can be called "singular" or "degenerate"
+ - Transpose is when a matrix is reflected through the diagonal. First row => first col, second row => second col etc.
+ - 
