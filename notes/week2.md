@@ -42,4 +42,40 @@
  - XTX must be invertible to work. If it isn't this means you either have too many features (and not enough data), or redundant features
  - Prefer Octave pinv over inv as pinv will work when XTX is non invertible
 ##Octave Tutorial
-
+###Basics
+ - ML will try to start with Octave then progress to C or Java if needed
+ - Simple mathematical ops work as expected (+,-,*,/,^)
+ - not equals is ~=
+ - other bool ops work as expected
+ - assignment works as usual
+ - to display, simply enter value, to display true calue, disp(x), c style formatting works
+ - Matrix assignment: A = [1 2; 3 4; 5 6]
+ - Column vector: [1; 2; 3]
+ - Generate vectors with 1:0.1:2
+ - ones(i,j) creates a matrix of ixj with all value of 1
+ - zeroes(i, j) does much the same but for 0
+ - rand(i, j) gives you a random matrix with values between 0 and 1
+ - randn(i, j) does guassian distribution
+ - hist(A) will create a histogram
+ - eye(i) creates the identifiy matrix ixi
+###Moving Data
+ - size(A) gives a matrix of the size of a matrix, e.g. size(zeroes(i,j)) returns [i j]
+ - length(A) gives size of longest dimension
+ - Octave will be able to load files from whatever directory it is in
+ - load <<somefile>>.dat will load in data files
+ - who will list variables currently defined
+ - whos gives more info
+ - save <<somefile>>.dat A will save the variable to a file
+ - clear will delete all workspace variables
+ - A(i,j) will get the element from ith row and jth column in a Matrix A
+ - A(2,:) will return every element in the 2nd row, colon is like a wilcard selector
+ - A(:,2) will return the vector of the 2nd row
+ - A([1 3],:) will return a matrix made of the values of the 1st row and 3rd row of A
+ - A(:,2) = [10, 11, 12] will replace the 2nd row of A with the specifiec values in the vector
+ - A = [A, [100; 101; 102]] will append a new column vector to the matrix A (semi colon means new row)
+ - C = [A B] will append column
+ - C = [A; B] will append rows
+###Computing
+###Plotting
+###Control Statements
+###Vectorization
