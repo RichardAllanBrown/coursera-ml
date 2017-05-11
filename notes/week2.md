@@ -76,6 +76,33 @@
  - C = [A B] will append column
  - C = [A; B] will append rows
 ###Computing
+ - log(v) will log all elements
+ - abs(v) will absolute everything. Lots of ops like this work.
+ - Single quote to transpose
+ - find can be useful to apply a boolean func to all elements
+ - magic(n) will create a nxn matrix where each row/col/diag adds to the same value. (and all values are different)
 ###Plotting
+ - Useful to check what is happening. e.g. plotting cost function for grad descent to ensure an appropriate learning rate has been chosen
+ - plot(x,y) will generate a plot
+ - hold on; is a command to ensure new firgures are created each time
+ - xlabel and ylable add labels, legend and title too
+ - print -dpng 'file.png' will save the plot as an image
+ - close will clear the figure
+ - figure(1); plot(t, y1) will specifically assign to a figure
+ - subplot allows you to create multiple plots on a single figure
+ - clf; clears the figure
+ - imagesc(A) [colorbar, colormap gray]  will plot the matrix in colours on a plot
+ - comma allows you to chain commands
 ###Control Statements
+ - for i=1:10, v(i) = 2^i; end; is a simple loop
+ - i=1:10; will create a vector of 1 to 10
+ - while i <= 5, v(i) = 100; i = i+1; end; is a while loop
+ - can also use break to escape a loop, if works as expected too
+ - a <<func_name>>.m file in your directory can be used to define a function
+ - function y = squareThisNumber(x) means y is going to be returned, x is the required argument
+ - y = x^2 is the function line, these two lines together create a valid .m file Octave can deal with
+ - addpath will allow a directory to be added as function sources
+ - function [y1, y2] = squareAndCube(x) would be a function definition that returns a tuple
 ###Vectorization
+ - specialized libraries are usually faster since they can use parallelism/memory cache efficiencies etc.
+ - limit use of loops, use vectors where possible
